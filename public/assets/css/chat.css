@@ -1,0 +1,120 @@
+.chat-card {
+    background-color: #f7f7fc;
+    background-image: url('../images/chat-bg-pattern.png');
+    background-repeat: repeat;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 300px;
+    min-height: 300px;
+    overflow-y: auto;
+    /* flex-direction: column-reverse; */
+}
+
+.chat-card::-webkit-scrollbar {
+    width: 5px; /* Ubah ukuran scrollbar horizontal */
+}
+
+.chat-card::-webkit-scrollbar-thumb {
+background-color: rgba(0, 0, 0, 0.3); /* Warna thumb scrollbar */
+border-radius: 5px;
+}
+
+.chat-card::-webkit-scrollbar-track {
+background-color: transparent; /* Warna track scrollbar */
+}
+
+.incoming-message,
+.outgoing-message {
+  display: flex;
+  align-items: flex-end;
+  /* flex-direction: column-reverse; */
+}
+
+.message-acronim {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.circle-acronim {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f3f6f9;
+  color: #1a1919;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-weight: bold; */
+}
+
+.incoming-message-content,
+.outgoing-message-content {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #0AB39C;
+}
+
+.incoming-message-time,
+.outgoing-message-time {
+  margin-left: 10px;
+}
+
+.incoming-message {
+  justify-content: flex-start;
+}
+
+.incoming-message-content {
+  background-color: #f3f6f9;
+}
+
+.incoming-message-time {
+  color: #6c757d;
+}
+
+.outgoing-message {
+  justify-content: flex-end;
+}
+
+.outgoing-message-content {
+    background-color: rgba(37, 211, 101, 0.300);
+}
+
+.outgoing-message-time {
+  color: #6c757d;
+}
+
+.incoming-message {
+    display: flex;
+    align-items: flex-end;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .incoming-message-content {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #21353D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+    
+  }
+  
+  .incoming-message-time {
+    margin-left: 10px;
+  }
+  
+  .incoming-message {
+    justify-content: flex-start;
+  }
+  
+  .incoming-message-content {
+    background-color: #F3F6F9;
+  }
+  
+  .incoming-message-time {
+    color: #6c757d;
+  }
+  
