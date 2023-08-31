@@ -35,7 +35,7 @@ class SendNotificationEmailToKudus implements ShouldQueue
             'pemohon'  => $this->dataemail['pemohon']
         ];
         
-        \Mail::to('rayidetriawan@gmail.com')->send(new \App\Mail\NewTicketToKudus($email));
+        \Mail::to('faizalcikal2121@gmail.com@gmail.com')->send(new \App\Mail\NewTicketToKudus($email));
         \Log::info('Send Mail to admin kudus');
     }
 }

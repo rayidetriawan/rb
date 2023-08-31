@@ -338,7 +338,7 @@ class PersetujuanController extends Controller
             return redirect()->route('persetujuan')->with('message','RB Berhasil Diupdate!');
         }
         
-        //update pembagian approval admin finance
+        //update pembagian approval kacab
         if ($request->STATUS == 3){
             if ($request->disetujui == '') {
                 return redirect()->back()->withErrors(['msg' => 'Tidak Boleh Kosong']);
@@ -400,7 +400,7 @@ class PersetujuanController extends Controller
 
             return redirect()->route('pengesahan')->with('message','RB Berhasil Diupdate!');
         }
-        //rb ditolak oleh admin finance
+        //rb ditolak oleh kacab
         if ($request->STATUS == 35) {
            
             

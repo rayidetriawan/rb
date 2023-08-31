@@ -15,8 +15,8 @@ class PengesahanController extends Controller
 {
     public function index()
     {
-        // khusus untuk admin finance
-        if(Auth::user()->ugrup->groupId == 29){
+        // khusus untuk branch head
+        if(Auth::user()->ugrup->groupId == 30){
 
             $data = TrxRbHeader::where('status',2)
                     ->orderBy('created_date', 'DESC')
@@ -29,7 +29,7 @@ class PengesahanController extends Controller
     }
     public function riwayat()
     {
-        if(Auth::user()->ugrup->groupId == 29){
+        if(Auth::user()->ugrup->groupId == 30){
             $data = TrxRbHeader::whereNotIn('status',[1,2])
                 ->orderBy('update_date', 'DESC')
                 ->paginate(10);

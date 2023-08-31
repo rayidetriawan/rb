@@ -704,7 +704,7 @@
                     {{-- end jika user kacab --}}
 
                     {{-- jika user admin finance --}}
-                    @if($user->AuthUsergrup->groupId == 29)
+                    @if($user->AuthUsergrup->groupId == 30)
                     @if($data->STATUS == 2)
                     <form method="POST" action="{{ route('persetujuan.update') }}">
                         @csrf

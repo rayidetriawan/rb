@@ -38,6 +38,6 @@ class SendNotificationEmailToAdminHo implements ShouldQueue
             'j_mengetahui'  => $this->dataemail['j_mengetahui']
         ];
 
-        \Mail::to('rayidetriawan@gmail.com')->send(new \App\Mail\NewTicketToAdminHo($email));
+        \Mail::to('faizalcikal2121@gmail.com@gmail.com')->send(new \App\Mail\NewTicketToAdminHo($email));
     }
 }

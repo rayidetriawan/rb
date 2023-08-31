@@ -6,6 +6,7 @@ use App\Bank;
 use App\BankCabang;
 use App\Branch;
 use App\Departemen;
+use App\Jabatan;
 use App\Jobs\SendNotificationEmailApproval;
 use App\Jobs\SendNotificationEmailKoreksi;
 use App\Jobs\SendNotificationEmailToAdminHo;
@@ -318,9 +319,9 @@ class PengajuanController extends Controller
                     ->where('status',0)
                     ->first();
         
-        // cek untuk otorisasi
-        $adminfinance = Departemen::where('id', Auth::user()->karyawan->id_bag_dept)->first();
-        if($adminfinance->id == 10){
+        // cek untuk otorisasi admin finance diganti jadi kacab
+        $adminfinance = Jabatan::where('id', Auth::user()->karyawan->id_jabatan)->first();
+        if($adminfinance->id == 2){
             $cekfinance = true;
         }else{
             $cekfinance = false;
@@ -338,9 +339,9 @@ class PengajuanController extends Controller
                         ->orderBy('leveling', 'asc')
                         ->get();
         
-        $diketahui = Karyawan::whereIn('id_jabatan',[2,3,7,8,11])->get(); //manager dan branch head
-        $disetujui = Karyawan::whereIn('id_jabatan',[2,3,7,8,11])->get(); //manager, gm, direktur, owner
-// dd($mengetahui,$menyetujui);
+        $diketahui = Karyawan::where('id_bag_dept',8)->whereIn('id_jabatan',[1,2,7,8,11])->get();
+        $disetujui = Karyawan::where('id_bag_dept',8)->whereIn('id_jabatan',[1,2,7,8,11])->get();
+
         return view('transaksi.pengajuanDetail', compact('data','cek','cekfinance','tracking','user','mengetahui','menyetujui','diketahui','disetujui'));
     }
     public function itemId()

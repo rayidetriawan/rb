@@ -409,7 +409,7 @@
                 </tr>
                 {{-- <tr>
                   <td class="content-block">
-                    © Honda Mitra Jaya Group<br>
+                    © Tirta Utama Abadi<br>
                     Grha Mitrajaya Group, Jl Fatmawati 160, Jakarta Selatan.
                   </td>
                 </tr> --}}

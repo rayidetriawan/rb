@@ -407,7 +407,7 @@
                                             </span>
                                             <p
                                             style="font-size: 13px; margin-bottom: 0px; margin-top: 3px; color: #878a99;">
-                                            Honda Mitra Jaya Group</p>
+                                            Tirta Utama Abadi</p>
                                             </div>
                                         </div>
                                     </td>
@@ -433,7 +433,7 @@
                 </tr>
                 <tr>
                   <td class="content-block">
-                    © Honda Mitra Jaya Group<br>
+                    © Tirta Utama Abadi<br>
                     Grha Mitrajaya Group, Jl Fatmawati 160, Jakarta Selatan.
                   </td>
                 </tr>

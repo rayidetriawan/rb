@@ -35,13 +35,13 @@
             <td><strong>{{ $createdate }}</strong></td>
             <td align="center" width="40%">
                 <p style="border:2px solid #000000; padding:5px">
-                    <strong> {{ $header->rb_id }} </strong>
+                    <strong> {{ $header->RB_ID }} </strong>
                 </p>
             </td>
         </tr>
         <tr>
             <td><strong>Kepada :<br>
-                    Yth. Pimpinan Honda Mitra Jaya Group <br /><br />
+                    Yth. Pimpinan Tirta Utama Abadi <br /><br />
                     Ditempat
                 </strong></td>
             <td align="center" width="40%">
@@ -53,7 +53,7 @@
         </tr>
         <tr>
             <td colspan="2"><br><br>Dengan Hormat<br /><br />
-                Sehubungan dengan kebutuhan {{ $header->cabang->branch_name }}, maka dengan ini kami mengajukan permohonan budget sebagai
+                Sehubungan dengan kebutuhan {{ $header->cabang->BRANCH_NAME }}, maka dengan ini kami mengajukan permohonan budget sebagai
                 berikut:</td>
         </tr>
     </table>
@@ -69,29 +69,29 @@
         @foreach($header->TrxRbDetailItem as $row => $item)
         <tr>
             <td style="padding:5px;" align="center">{{ $row+1 }}</td>
-            <td style="padding:5px;">{{ $item->item }}</td>
-            <td style="padding:5px;" align="center">{{ $item->qty }}</td>
-            <td style="padding:5px;" align="right">@uang($item->harga)</td>
-            <td style="padding:5px;" align="right">@uang($item->qty*$item->harga)</td>
+            <td style="padding:5px;">{{ $item->ITEM }}</td>
+            <td style="padding:5px;" align="center">{{ $item->QTY }}</td>
+            <td style="padding:5px;" align="right">@uang($item->HARGA)</td>
+            <td style="padding:5px;" align="right">@uang($item->QTY*$item->HARGA)</td>
         </tr>
         @endforeach
         <tr style="font-weight: bold; background-color:#E3DCDC">
             <td style="padding:5px;" colspan="4" align="right">Total</td>
 
-            <td style="padding:5px;" align="right">@uang($header->total_harga)</td>
+            <td style="padding:5px;" align="right">@uang($header->TOTAL_HARGA)</td>
         </tr>
     </table>
     <br />
-    @if(!empty($header->keterangan))
+    @if(!empty($header->KETERANGAN))
     <p style="border:2px solid #000000; padding:10px; border-radius: 5px; font-size: 12px;" align="left">
         <strong>NOTE: <br></strong>
         
-        @nl2br($header->keterangan)
+        @nl2br($header->KETERANGAN)
     </p>
     @else
     <div class="ckeditor">
         <strong>NOTE :</strong><br>
-        {!! $header->ket_ckeditor !!}
+        {!! $header->KET_CKEDITOR !!}
     </div>
     @endif
     <br>
@@ -104,17 +104,17 @@
                         <tr>
                             <td>Nama Bank</td>
                             <td>:</td>
-                            <td>{{ $header->bank }}</td>
+                            <td>{{ $header->BANK }}</td>
                         </tr>
                         <tr>
                             <td>No Rekening</td>
                             <td>:</td>
-                            <td>{{ $header->no_rek }}</td>
+                            <td>{{ $header->NO_REK }}</td>
                         </tr>
                         <tr>
                             <td>Nama Rekening</td>
                             <td>:</td>
-                            <td>{{ $header->nama_rek }}</td>
+                            <td>{{ $header->NAMA_REK }}</td>
                         </tr>
                     </table>
                 </strong>
